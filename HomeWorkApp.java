@@ -5,6 +5,7 @@ public class HomeWorkApp {
         printColor();
         compareNumbers();
     }
+
     static void printThreeWords(){
         System.out.println("Orange\n" + "Banana\n" + "Apple\n");
     }
