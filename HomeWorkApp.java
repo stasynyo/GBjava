@@ -5,15 +5,15 @@ public class HomeWorkApp {
         printColor();
         compareNumbers();
     }
-    static void printThreeWords(){
-        System.out.println("Orange\n" + "Banana\n" + "Apple\n");
+    static void printThreeWords() {
+        System.out.println("Orange\n" + "Banana\n" + "Apple");
     }
     static void checkSumSign() {
         int a = 10;
         int b = -12;
         System.out.println(a + b >= 0 ? "The sum is positive" : "The sum is negative");
     }
-    static void printColor(){
+    static void printColor() {
         int value = 47;
         if (value > 100) {
             System.out.println("Green");
@@ -25,7 +25,7 @@ public class HomeWorkApp {
             System.out.println("Yellow");
         }
     }
-    static void compareNumbers(){
+    static void compareNumbers() {
         int a = 3000;
         int b = 3000;
         System.out.println(a < b ? "a < b" : "a >= b");
