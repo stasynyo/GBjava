@@ -1,33 +1,40 @@
+/** 
+ * Java 1. Homework 2
+ * @author Stas Zaitsev
+ * @version 9/10/2021
+ * */ 
+
 public class HomeWorkApp {   
     public static void main(String[] args) {
-        printThreeWords();
-        checkSumSign();
-        printColor();
-        compareNumbers();
+        System.out.println(checkYear(2100));
     }
-    static void printThreeWords() {
-        System.out.println("Orange\n" + "Banana\n" + "Apple");
+
+    static boolean checkSum (int a, int b) {
+        return  a + b >= 10 && a + b <= 20 ? true : false;
     }
-    static void checkSumSign() {
-        int a = 10;
-        int b = -12;
-        System.out.println(a + b >= 0 ? "The sum is positive" : "The sum is negative");
+
+    static void checkSign (int a) {
+        System.out.println(a >= 0 ? "Positive" : "Negative" );
     }
-    static void printColor() {
-        int value = 47;
-        if (value > 100) {
-            System.out.println("Green");
-        }
-        else if (value < 0) {
-            System.out.println("Red");
-        }
-        else {
-            System.out.println("Yellow");
+
+    static boolean checkNegative(int a) {
+        return a < 0;
+    }
+
+    static void printPhrase(String phrase, int count) {
+        for (int i = 0; i < count; i++) {
+            System.out.println(phrase);
         }
     }
-    static void compareNumbers() {
-        int a = 3000;
-        int b = 3000;
-        System.out.println(a < b ? "a < b" : "a >= b");
+
+    static boolean checkYear(int year) {
+        if (year > 100) {
+            int temp = year % 100;
+            year -= temp;
+            temp %= 4;
+            year %= 4;
+            return year == 0 && temp == 0;
+        }
+        return ( year %= 4 ) == 0; 
     }
 }
