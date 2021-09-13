@@ -41,7 +41,7 @@ public class HomeWorkApp {
         System.out.println(Arrays.toString(createArray(2, 3)));
 
         int[] taskSix = new int[70];
-        taskSix = fillArray(taskOne, 10);
+        taskSix = fillArray(taskSix, 10);
         System.out.println(Arrays.toString(taskSix));
         defineMaxMin(taskSix);
     }
