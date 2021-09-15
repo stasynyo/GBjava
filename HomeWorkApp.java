@@ -44,6 +44,9 @@ public class HomeWorkApp {
         taskSix = fillArray(taskSix, 10);
         System.out.println(Arrays.toString(taskSix));
         defineMaxMin(taskSix);
+
+        int[] taskSeven = {1, 1, 1, 2, 1};
+        System.out.println(checkBalance(taskSeven));
     }
 
     static void swapBinaries(int[] arr){
@@ -83,5 +86,26 @@ public class HomeWorkApp {
             }
         }
         System.out.println("Maximum = " + maximum + "\nMinimum = " + minimum);
+    }
+
+    static boolean checkBalance (int[] arr) {
+        int sum = 0;
+        int resum = 0;
+
+        for (int i = 0; i < arr.length; i++ ) {
+            sum += arr[i];
+        }
+
+        for (int i = arr.length - 1; i > 0; i-- ) {
+            resum += arr[i];
+            int temp = sum;
+            temp -= resum;
+            if (resum == temp) {
+                return true; 
+            }
+        }
+        return false; 
+
+//        return (sum %= 2) == 0;
     }
 }
