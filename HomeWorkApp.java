@@ -1,33 +1,23 @@
+/** 
+ * Java 1. Homework 3
+ * @author Stas Zaitsev
+ * @version 9/27/2021
+ */
+
 public class HomeWorkApp {   
     public static void main(String[] args) {
-        printThreeWords();
-        checkSumSign();
-        printColor();
-        compareNumbers();
-    }
-    static void printThreeWords(){
-        System.out.println("Orange\n" + "Banana\n" + "Apple\n");
-    }
-    static void checkSumSign() {
-        int a = 10;
-        int b = -12;
-        System.out.println(a + b >= 0 ? "The sum is positive" : "The sum is negative");
-    }
-    static void printColor(){
-        int value = 47;
-        if (value > 100) {
-            System.out.println("Green");
+        Staff[] staffArr = new Staff[5];
+        staffArr[0] = new Staff("Ivanov Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 30);
+        staffArr[1] = new Staff("Vasiliev Vasily", "QA", "vasvas@mailbox.com", "892312313", 30000, 33);
+        staffArr[2] = new Staff("Gubaidulina Zulfia", "Manager", "gubzul@mailbox.com", "892312314", 30000, 28);
+        staffArr[3] = new Staff("Smirnova Maria", "SEO", "smimar@mailbox.com", "892312315", 30000, 45);
+        staffArr[4] = new Staff("Tom Cruise", "Developer", "tomcru@mailbox.com", "892312316", 30000, 59);
+        
+        for (Staff staff : staffArr) {
+            int temp = staff.getAge();
+            if (temp > 40) {
+                System.out.println(staff);
+            }
         }
-        else if (value < 0) {
-            System.out.println("Red");
-        }
-        else {
-            System.out.println("Yellow");
-        }
-    }
-    static void compareNumbers(){
-        int a = 3000;
-        int b = 3000;
-        System.out.println(a < b ? "a < b" : "a >= b");
     }
 }
