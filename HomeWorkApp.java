@@ -1,23 +1,21 @@
 /** 
  * Java 1. Homework 3
  * @author Stas Zaitsev
- * @version 9/27/2021
+ * @version 9/28/2021
  */
 
 public class HomeWorkApp {   
     public static void main(String[] args) {
-        Staff[] staffArr = new Staff[5];
-        staffArr[0] = new Staff("Ivanov Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 30);
-        staffArr[1] = new Staff("Vasiliev Vasily", "QA", "vasvas@mailbox.com", "892312313", 30000, 33);
-        staffArr[2] = new Staff("Gubaidulina Zulfia", "Manager", "gubzul@mailbox.com", "892312314", 30000, 28);
-        staffArr[3] = new Staff("Smirnova Maria", "SEO", "smimar@mailbox.com", "892312315", 30000, 45);
-        staffArr[4] = new Staff("Tom Cruise", "Developer", "tomcru@mailbox.com", "892312316", 30000, 59);
-        
-        for (Staff staff : staffArr) {
-            int temp = staff.getAge();
-            if (temp > 40) {
-                System.out.println(staff);
-            }
+        Cat cat = new Cat("Bars", "yellow", 5);
+        Dog dog = new Dog("Muhtar", "brown", 2);
+
+        IAnimal[] animals = {cat, dog};
+        for (IAnimal animal : animals) {
+            System.out.println(animal);
+            animal.voice();
+            animal.run(136);
+            animal.swim(4);
         }
+        System.out.println("Count: " + Animal.getCountOfAnimals() + "\nCats: " + cat.getCountOfCats() + "\nDogs: " + dog.getCountOfDogs());
     }
 }
