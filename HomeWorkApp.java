@@ -16,6 +16,6 @@ public class HomeWorkApp {
             animal.run(136);
             animal.swim(4);
         }
-        System.out.println("Count: " + Animal.getCountOfAnimals() + "\nCats: " + cat.getCountOfCats() + "\nDogs: " + dog.getCountOfDogs());
+        System.out.println("Count: " + Animal.getCountOfAnimals() + "\nCats: " + Cat.getCountOfAnimals() + "\nDogs: " + Dog.getCountOfAnimals());
     }
 }
