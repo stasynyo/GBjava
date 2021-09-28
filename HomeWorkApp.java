@@ -1,33 +1,21 @@
+/** 
+ * Java 1. Homework 3
+ * @author Stas Zaitsev
+ * @version 9/28/2021
+ */
+
 public class HomeWorkApp {   
     public static void main(String[] args) {
-        printThreeWords();
-        checkSumSign();
-        printColor();
-        compareNumbers();
-    }
-    static void printThreeWords(){
-        System.out.println("Orange\n" + "Banana\n" + "Apple\n");
-    }
-    static void checkSumSign() {
-        int a = 10;
-        int b = -12;
-        System.out.println(a + b >= 0 ? "The sum is positive" : "The sum is negative");
-    }
-    static void printColor(){
-        int value = 47;
-        if (value > 100) {
-            System.out.println("Green");
+        Cat cat = new Cat("Bars", "yellow", 5);
+        Dog dog = new Dog("Muhtar", "brown", 2);
+
+        IAnimal[] animals = {cat, dog};
+        for (IAnimal animal : animals) {
+            System.out.println(animal);
+            animal.voice();
+            animal.run(136);
+            animal.swim(4);
         }
-        else if (value < 0) {
-            System.out.println("Red");
-        }
-        else {
-            System.out.println("Yellow");
-        }
-    }
-    static void compareNumbers(){
-        int a = 3000;
-        int b = 3000;
-        System.out.println(a < b ? "a < b" : "a >= b");
+        System.out.println("Count: " + Animal.getCountOfAnimals() + "\nCats: " + cat.getCountOfCats() + "\nDogs: " + dog.getCountOfDogs());
     }
 }
